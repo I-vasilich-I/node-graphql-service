@@ -16,6 +16,7 @@ This application caontains multiple services that are used to serve for Musicify
 2. If needed apply changes in .env file. Each .env file have _PORT_ variable (by default it's 3000 in each service)
    and _VERIFY_TOKEN_URL_ (url for jwt verification in Users service)
 3. You can install node modules by:
+
     ```bash
    # separately in each service folder
    npm i
@@ -26,7 +27,9 @@ This application caontains multiple services that are used to serve for Musicify
    # for all services (install dependencies for root folder and it will install nested dependencies in postinstall script)
    npm i
    ```
+
 4. To run services:
+
    ```bash
    # separately in each service folder
    npm run:start:dev
@@ -50,3 +53,12 @@ The application is using MongoDB as a database. Feel free to choose any solution
 
 [Docker MongoDB](https://hub.docker.com/_/mongo)
 
+## Running Mongo image (requires installed docker)
+
+   ```bash
+   # pull mongo image
+   docker pull mongo
+
+   # run docker compose with predefined config
+   docker-compose -f docker-compose.yaml up
+   ```

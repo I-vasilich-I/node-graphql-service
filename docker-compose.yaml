@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27888:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+networks:
+  default:
+    name: mongodb_network
